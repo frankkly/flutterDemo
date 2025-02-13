@@ -46,7 +46,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
       ),
     );
   }
-  _pickerShow()async{
+  _pickerShow() async {
     final ImagePicker _picker = ImagePicker();
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery,maxWidth: 400);
     if(image != null){
@@ -57,7 +57,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
   }
   _cameraShow() async {
     ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+    final XFile? image = await _picker.pickImage(source: ImageSource.camera,maxWidth: 400);
 
     if(image != null){
       setState(() {
